@@ -1,0 +1,196 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: radial-gradient(#f2e8cf, #ddbea9);
+    width: 100%;
+    border-bottom: solid 0.1rem #3d3b3c;
+}
+
+
+.logo{
+    height: 7rem;
+    width: auto;
+    display: block;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.navCel ul li{
+    background: radial-gradient(#f2e8cf, #ddbea9);
+    opacity: 90%;
+    padding: 1rem;
+}
+
+.menuNav{
+    display: none;
+}
+
+.mainIndex{
+    display: grid;
+    grid-template-areas: "parrUno"
+                         "primerImagen"
+                         "parrDos"
+                         "segundaImagen";
+}
+
+.parrUno{
+    grid-area: parrUno;
+    text-align: center;
+    margin: 1rem;
+}
+
+.primerImagen{
+    grid-area: primerImagen;
+    height: auto;
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+
+.parrDos{
+    grid-area: parrDos;
+    text-align: center;
+    margin: 1rem;
+}
+
+.segundaImagen{
+    grid-area: segundaImagen;
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.extraText{
+    display: none;
+}
+
+footer{
+    background: radial-gradient(#f2e8cf, #ddbea9);
+    height: 3rem;
+    margin-top: 0.5rem;
+}
+
+.derechos{
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+    
+    .navCel{
+        display: none;
+    }
+
+    .menuNav{
+        display: contents;
+    }
+
+    .menuNav ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        text-decoration: none;
+    }
+
+    .menuNav ul li{
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    }
+
+    .menuNav ul li a{
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: #540b0e;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    header{
+        width: 100%;
+    }
+
+    .menuNav{
+        padding: -4%;
+        margin: -4%;
+    }
+
+    .menuNav ul{
+        justify-content: right;
+    }
+
+    .menuNav ul li{
+        padding-right: 5%;
+        padding-top: 0%;
+        }
+
+    .logo{
+        height: 12vh;
+        width: auto;
+        margin-left: 3%;
+        padding-top: 0.5vh;
+        padding-bottom: 0%;
+    }
+
+    main{
+        height: 74vh;
+    }
+    
+    .mainIndex{
+        display: grid;
+        grid-template-areas: "primerImagen parrUno"
+                             "segundaImagen parrDos";
+    }
+
+    .parrUno{
+        grid-area: parrUno;
+        text-align: justify;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 2%;
+    }
+
+    .parrDos{
+        grid-area: parrDos;
+        text-align: justify;
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 2%;
+    }
+
+    .extraText{
+        display: contents;
+        text-align: justify;  
+    }
+
+    .primerImagen{
+        grid-area: primerImagen;
+        height: 34vh;
+        width: auto;
+        padding-left: 6%;
+
+    }
+    .segundaImagen{
+        grid-area: segundaImagen;
+        height: 34vh;
+        width: auto;
+        padding-left: 6%;
+
+    }
+
+    footer{
+        height: 8vh;
+        border-top: solid 0.1rem #3d3b3c;
+    }
+
+}
