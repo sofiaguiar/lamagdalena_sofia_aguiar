@@ -96,6 +96,18 @@ footer{
     box-shadow: -2px 2px 10px #a5a5a5;
 }
 
+/* Social Media */
+
+.socialMedia{
+    background-color: #f2e8cf;
+}
+
+div a img{
+    height: 0.5rem;
+    width: auto;
+}
+
+
 /* CONTACTO */
 
 .mainContacto{
@@ -158,6 +170,59 @@ footer{
 .footerContacto{
     margin: 0%;
 }
+
+
+/* SOBRE NOSOTROS */
+
+
+.mainSobrenosotros div a{
+    display: block;
+    margin: auto;
+    background-color: #540b0e;
+    border: #540b0e; 
+}
+
+.mainSobrenosotros div{
+    display: block;
+    margin: auto;
+    
+}
+
+.mainSobrenosotros div img{
+    display: block;
+    margin: auto;
+    height: 20rem;
+    width: auto;
+    border-radius: 20%;
+    box-shadow: -2px 2px 10px #a5a5a5;
+}
+
+/* 
+.mainSobrenosotros div a{
+    display: block;
+    margin: auto;
+}
+
+.mainSobrenosotros div h2{
+    text-align: center;
+    margin: 1rem;
+}
+
+.mainSobrenosotros div p{
+    text-align: center;
+    margin: 1rem;
+}
+
+.mainSobrenosotros div img{
+    display: block;
+    margin: auto;
+    height: 20rem;
+    width: auto;
+    border-radius: 20%;
+    box-shadow: -2px 2px 10px #a5a5a5;
+}
+*/
+
 
 /* Media Queries */
 
@@ -256,14 +321,14 @@ footer{
         grid-area: primerImagen;
         height: 34vh;
         width: auto;
-        padding-left: 6%;
+        margin-left: 6%;
 
     }
     .segundaImagen{
         grid-area: segundaImagen;
         height: 34vh;
         width: auto;
-        padding-left: 6%;
+        margin-left: 6%;
 
     }
 
@@ -285,7 +350,7 @@ footer{
         padding: 0.5rem;
         background-color: rgba(255, 255, 255, 0.7);
         display: grid;
-        grid-template-areas: " contactForm mapa";
+        grid-template-areas: "contactForm mapa";
         justify-content: center;
         align-items: center;
         justify-items: center;
@@ -345,6 +410,37 @@ footer{
         margin-left: 2.5rem;
         margin-right: 2.5rem;
         box-shadow: -2px 2px 10px #a5a5a5;
+    }
+
+    .mainSobrenosotros{
+        display: grid;
+        grid-template-areas: "agricultura ganaderia junco corral";
+    }
+
+    .agricultura card mt-3{
+        grid-area: agriculutra;
+    }
+
+    .ganaderia card mt-3{
+        grid-area: ganaderia;
+    }
+
+    .junco card mt-3{
+        grid-area: junco;
+    }
+    
+    .corral card mt-3{
+        grid-area: corral;
+    }
+
+    .mainSobrenosotros div img{
+        height: 12rem;
+        width: auto;
+        margin-top: 2rem;
+    }
+
+    .mainSobrenosotros div{
+        margin-top: 1.5rem;   
     }
 
 }
