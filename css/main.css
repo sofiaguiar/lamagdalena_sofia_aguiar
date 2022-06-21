@@ -87,11 +87,10 @@ footer{
     font-size: 0.9em;
 }
 
-.mainGaleria{
-    height: 71vh;
-}
+/* GALERIA */
+
 .container {
-    width: 80%;
+    width: 90%;
     height: 100%;
     margin: auto;
     margin-top: 1rem;
@@ -105,18 +104,15 @@ footer{
   
 .lightbox-gallery {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 }
   
 .lightbox-gallery div > img {
-    width: 22rem;
+    width: 97%;
     display: block;
-}
-
-.pieGaleria{
-    position: relative;
+    margin: auto;
 }
   
 .lightbox-gallery div {
@@ -124,51 +120,17 @@ footer{
     flex-basis: 9rem;
 }
   
-  @media only screen and (max-width: 400px) {
-    .lightbox-gallery {
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .lightbox-gallery div > img {
-        width: 90%;
-        margin: auto;
-    }
-
-    .container {
-        width: 90%;
-        height: 100%;
-        margin: auto;
-        margin-top: 1rem;
-        padding: 0.5rem;
-    }
-
-    .mainGaleria{
-        height: 100%;
-    }
-
-  }
-  
-  /*Lighbox CSS*/
-  
-  .lightbox {
-    display: none;
+.lightbox {
     width: 85%;
     height: 80%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
+    background-color: rgba(0.4, 0.4, 0.4, 0.7);
     top: 0;
     left: 0;
     z-index: 20;
-    padding-top: 25px;
+    padding-top: 1.4rem;
     box-sizing: border-box;
-  }
+}
   
-  .lightbox img {
-    display: block;
-    margin: auto;
-  }
 
 /* SOCIAL MEDIA */
 
@@ -303,7 +265,6 @@ footer{
 .footerContacto{
     margin: 0%;
 }
-
 
 /* SOBRE NOSOTROS */
 
@@ -561,5 +522,40 @@ footer{
     .mainSobrenosotros div{
         margin-top: 1.5rem;   
     }
+
+    /* GALERIA */
+
+    .mainGaleria{
+        height: 71vh;
+        width: 100%;
+    }
+
+    .container {
+        width: 1100px;
+        height: 100%;
+        margin: auto;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        background-color: #fff;
+        border-radius: 0.9rem;
+        overflow: hidden;
+        box-sizing: border-box;
+        box-shadow: 0 0.9rem 2rem rgba(0.4, 0.4, 0.4, 0.4);
+    }
+
+
+    .lightbox-gallery {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .lightbox-gallery div > img {
+        width: auto;
+        height: 13rem;
+        margin: auto;
+    }
+
 
 }
