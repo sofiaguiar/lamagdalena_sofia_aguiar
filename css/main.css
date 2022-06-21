@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 header{
     background: radial-gradient(#f2e8cf, #ddbea9);
     width: 100%;
@@ -82,31 +86,147 @@ footer{
     font-size: 0.9em;
 }
 
-/* GALERIA */
-
 .mainGaleria{
-    height: 68vh;
-    margin: 2%;
+    height: 71vh;
 }
-
-.mainGaleria div img{
-    display: block;
-    height: 70vh;
+.container {
+    width: 80%;
+    height: 100%;
     margin: auto;
-    box-shadow: -2px 2px 10px #a5a5a5;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 0.9rem 2rem rgba(0.4, 0.4, 0.4, 0.4);
+}
+  
+.lightbox-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.lightbox-gallery div > img {
+    width: 22rem;
+    display: block;
 }
 
-/* Social Media */
+.pieGaleria{
+    position: relative;
+}
+  
+.lightbox-gallery div {
+    margin: 0.6rem;
+    flex-basis: 9rem;
+}
+  
+  @media only screen and (max-width: 480px) {
+    .lightbox-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .lightbox > div {
+      margin-bottom: 5px;
+    }
+  }
+  
+  /*Lighbox CSS*/
+  
+  .lightbox {
+    display: none;
+    width: 85%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding-top: 25px;
+    box-sizing: border-box;
+  }
+  
+  .lightbox img {
+    display: block;
+    margin: auto;
+  }
 
-.socialMedia{
-    background-color: #f2e8cf;
+/* SOCIAL MEDIA */
+
+.social{
+    margin-top: 1rem;
 }
 
-div a img{
-    height: 0.5rem;
-    width: auto;
-}
+.social-btn {
+    display: flex;
+    width: 11rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 0.8rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border: 0.2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    margin-bottom: 5px;
+    position: relative;
+    left: -8rem;
+    transition: left 1s;
+  }
+  .social-btn:hover {
+    left: -1.5rem;
+    transition: left 1s;
+  }
+  
+  .social {
+    position: fixed;
+    top: 12rem;
+  }
+  .social a {
+    text-decoration: none;
+  }
 
+  .color-instagram {
+    background: radial-gradient(#C13584, #E1306C);  
+  }
+  .color-whatsapp {
+    background-color: #1DA1F2;
+  }
+  
+  .social-btn img {
+    width: 2.5rem;
+  }
+  
+  .social-btn p {
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .icons8-instagram {
+    order: 2;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url("../img/insta.png")
+      50% 50% no-repeat;
+    background-size: 100%;
+  }
+  
+  .icons8-whatsapp {
+    order: 2;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url("../img/twiit.png")
+      50% 50% no-repeat;
+    background-size: 100%;
+  }
+  
 
 /* CONTACTO */
 
@@ -117,17 +237,14 @@ div a img{
     display: grid;
     grid-template-areas: "contactForm"
                          "mapa";
-    justify-content: center;
-    justify-items: center;
     align-items: center;
-    align-content: center;
 }
 
 .contactForm{
     grid-area: contactForm;
     display: block;
     margin: auto;
-    width: 27rem;
+    width: 90%;
     margin-top: 1rem;
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: -2px 2px 10px #a5a5a5;
@@ -137,7 +254,7 @@ div a img{
 .contactanos{
     display: block;
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 0.8rem;
     text-align: center;
     color: #540b0e;
     opacity: 100%;
@@ -145,25 +262,25 @@ div a img{
 
 .mainContacto input{
     border: 0.1rem solid #3d3b3c;
-    height: 1.6rem;
-    width: 25rem;
-    padding: 0.6rem;
-    margin: 0.6rem;
+    height: 1.8rem;
+    width: 97%;
+    padding: 0.4rem;
+    margin: 0.4rem;
 }
 
 .mainContacto .texto input {
-    height: 4.5rem;
-    margin-top: 0%;
+    height: 5rem;
     margin-top: 0.3rem;
 }
 
 .mapa{
     grid-area: mapa;
-    width: 27rem;
+    width: 95%;
+    display: block;
     margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
     box-shadow: -2px 2px 10px #a5a5a5;
 }
 
@@ -174,8 +291,7 @@ div a img{
 
 /* SOBRE NOSOTROS */
 
-
-.mainSobrenosotros div a{
+.mainSobrenosotros div a {
     display: block;
     margin: auto;
     background-color: #540b0e;
@@ -185,14 +301,17 @@ div a img{
 .mainSobrenosotros div{
     display: block;
     margin: auto;
-    
+}
+
+.mainSobrenosotros div div p{
+    text-align: center;
 }
 
 .mainSobrenosotros div img{
     display: block;
     margin: auto;
-    height: 20rem;
-    width: auto;
+    height: auto;
+    width: 90%;
     border-radius: 20%;
     box-shadow: -2px 2px 10px #a5a5a5;
 }
@@ -347,58 +466,39 @@ div a img{
     
     .ubicYcontacto{
         border: solid #3d3b3c;
+        margin: auto;
         padding: 0.5rem;
         background-color: rgba(255, 255, 255, 0.7);
-        display: grid;
-        grid-template-areas: "contactForm mapa";
-        justify-content: center;
-        align-items: center;
-        justify-items: center;
-        align-content: center;
+        box-shadow: -2px 2px 10px #a5a5a5;
+        display: flex;
+        width: 85%;
     }
     
     .contactForm{
         border: none;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
-        width: 27rem;
-  
+        margin: 2.5rem;
+        width: 95%;
     }
     
     .contactanos{
-        grid-area: contactanos;
         font-size: 1.5rem;
         padding: 1rem;
-        width: 27rem;
-        text-align: left;
+        text-align: center;
         color: #540b0e;
         opacity: 100%;
     }
     
-    .mail{
-        grid-area: mail;
-    }
-    
-    .numero{
-        grid-area: numero;
-    }
-    
-    .texto{
-        grid-area: texto;
-    }
-    
     .mainContacto input{
         border: 0.1rem solid #3d3b3c;
-        height: 1.6rem;
-        width: 25rem;
+        display: block;
+        height: 2rem;
+        width: 96%;
         padding: 0.6rem;
         margin: 0.6rem;
     }
     
     .mainContacto .texto input {
-        height: 4.5rem;
+        height: 9rem;
         margin-top: 0%;
         margin-top: 0.3rem;
     }
@@ -410,7 +510,10 @@ div a img{
         margin-left: 2.5rem;
         margin-right: 2.5rem;
         box-shadow: -2px 2px 10px #a5a5a5;
+        width: 95%;
     }
+
+    /* SOBRE NOSOTROS */
 
     .mainSobrenosotros{
         display: grid;
@@ -434,9 +537,9 @@ div a img{
     }
 
     .mainSobrenosotros div img{
-        height: 12rem;
+        height: 11rem;
         width: auto;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .mainSobrenosotros div{
