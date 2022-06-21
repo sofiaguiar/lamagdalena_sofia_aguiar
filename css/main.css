@@ -79,6 +79,7 @@ footer{
     background: radial-gradient(#f2e8cf, #ddbea9);
     height: 3rem;
     margin-top: 0.5rem;
+    font-size: 0.7rem;
 }
 
 .derechos{
@@ -123,15 +124,30 @@ footer{
     flex-basis: 9rem;
 }
   
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 400px) {
     .lightbox-gallery {
       flex-direction: column;
       align-items: center;
+      flex-wrap: wrap;
     }
-  
-    .lightbox > div {
-      margin-bottom: 5px;
+
+    .lightbox-gallery div > img {
+        width: 90%;
+        margin: auto;
     }
+
+    .container {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
+    .mainGaleria{
+        height: 100%;
+    }
+
   }
   
   /*Lighbox CSS*/
